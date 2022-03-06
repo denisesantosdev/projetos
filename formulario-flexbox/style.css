@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #A3EBDF;
+    --cor2: #62a89d;
+    --cor3: #FFF4D4;
+    --cor4: #F2856D;
+    --cor5: #F85260;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor1);
+    background-image: url(holiday.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Helvetica, Arial, sans-serif;
+} 
+
+main {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo {
+    background-color: var(--cor2);
+    color: white;
+    font-size: 3rem;
+    font-variant: small-caps;
+    text-align: center;
+    width: fit-content;
+    margin: 0.5em auto;
+    padding: 0.4em 0.7em;
+    border-radius: 0.2em;
+}
+
+form {
+    position: relative;
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 1em;
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.295);
+} 
+
+.container {        /* fieldset*/
+    display: flex;
+    padding: 1em;
+    border: none;
+    gap: 1em;
+}
+
+.pergunta {
+    width: 50%;
+    font-weight: bold;
+}
+
+.resposta {
+    width: 50%;
+}
+
+#nome, #sobrenome, #email, #nascimento, #epoca, option, textarea {
+    padding: 0.5em;
+    border: 0.2em dotted var(--cor2);
+    border-radius: 0.4em;
+    padding: 0.5em;
+    outline: none;
+}
+
+input[value="exemplo@exemplo.com"] {
+    color: rgba(0, 0, 0, 0.432);
+}
+
+#estrelas {
+    width: 130px;
+}
+.resposta p {
+    letter-spacing: 5px;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: var(--cor1);
+}
+
+hr {
+    width: 50%;
+    margin: 1em auto;
+}
+
+.resposta div {
+    display: inline-block;
+}
+
+.resposta div label {
+    margin-right: 1em;
+}
+
+.resposta div input {
+    margin-bottom: 1em;
+}
+
+button {
+    border: 0;
+    font-size: 1rem;
+    font-variant: small-caps;
+    background-color: var(--cor5);
+    color: white;
+    border-radius: 0.2em;
+    padding: 0.4em 0.7em;
+    position: absolute;
+    max-width: fit-content;
+    left: 0;
+    right: 0;
+    margin: 2em auto;
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.295);
+}
+
+button:focus {
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.295) inset;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 5em;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--cor3);
+    padding: 0.5em;
+}
+
+footer a:hover {
+    background-color: var(--cor5);
+}
+
+@media (max-width:580px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .pergunta {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+    
+    .resposta {
+        width: 100%;
+    }   
+}
+
+

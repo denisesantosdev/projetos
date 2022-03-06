@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Satisfação</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+    <main>
+        <h1 class="titulo">Satisfação com a Viagem</h1>
+        <form action="" autocomplete="on">
+            <!-- TEXT -->
+            <fieldset class="container">
+                <label class="pergunta" for="nome">Nome Completo</label>
+                <input class="resposta" type="text" name="nome" id="nome" required>
+            </fieldset>
+
+            <fieldset class="container">
+                <label class="pergunta" for="email">Email</label>
+                <input class="resposta" type="email" name="email" id="email" required value="exemplo@exemplo.com">
+            </fieldset>
+
+            <!-- date -->   
+            <fieldset class="container">
+                <label class="pergunta" for="nascimento">Data de Nascimento</label>
+                <input class="resposta" type="date" name="nascimento" id="nascimento" required min="1950-01-01" max="2022-01-01">
+            </fieldset>
+
+            <hr>
+            <!-- RANGE -->
+            <fieldset class="container">
+                <label class="pergunta" for="estrelas">Quantas estrelas você daria pra sua viagem?</label>
+                <div class="resposta">
+                    <input type="range" min="0" max="4" name="estrelas" id="estrelas">
+                    <p>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+                </div>
+            </fieldset>
+
+            <!-- RADIO -->
+            <fieldset class="container">
+                <label class="pergunta" for="">Como foi a sua estada conosco?</label>
+                <div class="resposta">
+                    <div>
+                        <input type="radio" name="estada" id="terrivel" value="terrivel">
+                        <label for="terrivel">Terrivel</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="estada" id="ruim" value="ruim">
+                        <label for="ruim">Ruim</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="estada" id="razoavel" value="razoavel">
+                        <label for="razoavel">Razoável</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="estada" id="boa" value="boa">
+                        <label for="boa">Boa</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="estada" id="otima" value="otima">
+                        <label for="otima">Ótima</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="estada" id="maravilhosa" value="maravilhosa">
+                        <label for="maravilhosa">Maravilhosa</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- SELECT/OPTION -->
+            <fieldset class="container">
+                <label class="pergunta" for="epoca">Em que época do ano você nos visitou?</label>
+                    <select class="resposta" name="epoca" id="epoca">
+                        <option value="" selected disabled value="">Selecione...</option>
+                        <option value="inverno">Inverno</option>
+                        <option value="verao">Verão</option>
+                        <option value="outono">Outono</option>
+                        <option value="primavera">Primavera</option>
+                    </select>
+            </fieldset>
+
+            <!-- CHECKBOX -->
+            <fieldset class="container">
+                <label class="pergunta">Quais foram seus pontos turísticos favoritos durante a nossa tour?</label>
+                    <div class="resposta">
+                        <div>
+                            <input type="checkbox" name="praia" id="praia" value="praia">
+                            <label for="praia">Praia</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="museu" id="museu" value="museu">
+                            <label for="museu">Museu</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="trilha" id="trilha" value="trilha">
+                            <label for="trilha">Trilha pela montanha</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="cachoeira" id="cachoeira" value="cachoeira">
+                            <label for="cachoeira">Cachoeira</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="cidadehistorica" id="cidadehistorica" value="cidadehistorica">
+                            <label for="cidadehistorica">Cidade Histórica</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="ilha" id="ilha" value="ilha tropical">
+                            <label for="ilha">Ilha Tropical</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" name="chacara" id="chacara" value="chacara">
+                            <label for="chacara">Chácara</label>
+                        </div>
+                    </div>
+            </fieldset>
+
+            <!-- TEXTAREA -->
+            <fieldset class="container">
+                <label class="pergunta" for="textarea">Podemos fazer algo para melhorar?</label>
+                <textarea class="resposta" name="textarea" id="textarea" cols="50" rows="10" placeholder="Digite aqui..." class="direita"></textarea>
+            </fieldset>
+
+            <!-- RADIO -->
+            <fieldset class="container">
+                <label class="pergunta">Você viajaria conosco de novo?</label>
+
+                    <div class="resposta">
+                        <div>
+                            <input type="radio" name="retorno" id="sim" value="sim">
+                            <label for="sim">Sim</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="retorno" id="nao" value="nao">
+                            <label for="nao">Não</label>
+                        </div>
+                    </div>
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por <a href="#">Denise Santos</a>
+        </p>
+       
+        <p>Imagem de <a href="https://pixabay.com/pt/users/rani26-11158896/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4138980" target="_blank">Rani Suarni</a> por <a href="https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4138980"  target="_blank">Pixabay</a>
+        </p>
+    </footer>
+</body>
+</html>
